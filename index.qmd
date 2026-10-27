@@ -1,0 +1,77 @@
+---
+title: "Panorama 2025: filosofia no Espírito Santo"
+subtitle: "Escolas, turmas e docentes de filosofia nos 78 municípios capixabas"
+---
+
+```{python}
+exec(open("_comum.py").read())
+em = esc25[esc25.QT_TUR_MED.fillna(0) > 0]
+k = dict(
+  esc_em=len(em),
+  esc_filo=int(em.TEM_FILOSOFIA.sum()),
+  doc=int(esc25.QT_DOC_BAS_DISC_FILOSOFIA.sum()),
+  tur=int(esc25.QT_TUR_BAS_DISC_FILOSOFIA.sum()),
+)
+from IPython.display import Markdown
+Markdown(f"""
+::: {{.grid}}
+::: {{.g-col-6 .g-col-md-3}}
+**{k['esc_em']}**<br>escolas com Ensino Médio
+:::
+::: {{.g-col-6 .g-col-md-3}}
+**{k['esc_filo']}**<br>dessas oferecem filosofia
+:::
+::: {{.g-col-6 .g-col-md-3}}
+**{k['doc']:,}**<br>vínculos docentes em filosofia¹
+:::
+::: {{.g-col-6 .g-col-md-3}}
+**{k['tur']:,}**<br>turmas com filosofia
+:::
+:::
+""".replace(",", "."))
+```
+
+¹ Um mesmo professor que leciona em duas escolas é contado nas duas. O número indica vínculos, não pessoas.
+
+## Mapa
+
+```{python}
+m = mun25.copy()
+m["turmas_por_docente"] = (m.turmas_filosofia / m.docentes_filosofia).round(1)
+fig = px.choropleth(m, geojson=geo, locations="CO_MUNICIPIO", color="docentes_filosofia",
+    color_continuous_scale="Blues", hover_name="NO_MUNICIPIO",
+    hover_data={"CO_MUNICIPIO": False, "escolas_com_filosofia": True, "turmas_filosofia": True,
+                "turmas_por_docente": True, "afd_em_grupo1_medio": ":.1f"},
+    labels={"docentes_filosofia": "Docentes de filosofia", "escolas_com_filosofia": "Escolas com filosofia",
+            "turmas_filosofia": "Turmas com filosofia", "turmas_por_docente": "Turmas por docente",
+            "afd_em_grupo1_medio": "AFD Médio, Grupo 1 (%)"})
+fig.update_geos(fitbounds="locations", visible=False)
+fig.update_layout(height=620, margin=dict(l=0, r=0, t=0, b=0))
+fig
+```
+
+## Por dependência administrativa
+
+```{python}
+d = esc25.groupby("DEPENDENCIA")[["QT_DOC_BAS_DISC_FILOSOFIA", "QT_TUR_BAS_DISC_FILOSOFIA"]].sum().reset_index()
+d.columns = ["Rede", "Docentes de filosofia", "Turmas com filosofia"]
+d = d.sort_values("Docentes de filosofia")
+fig = px.bar(d, x="Docentes de filosofia", y="Rede", orientation="h", text="Docentes de filosofia",
+             color_discrete_sequence=[COR], hover_data=["Turmas com filosofia"])
+fig.update_layout(height=280, margin=dict(l=0, r=20, t=10, b=0), yaxis_title=None)
+fig
+```
+
+## Filosofia e sociologia
+
+As duas disciplinas voltaram juntas ao currículo obrigatório do Ensino Médio em 2008 e costumam ser comparadas.
+
+```{python}
+fig = px.scatter(mun25, x="docentes_sociologia", y="docentes_filosofia", hover_name="NO_MUNICIPIO",
+                 labels={"docentes_sociologia": "Docentes de sociologia", "docentes_filosofia": "Docentes de filosofia"},
+                 color_discrete_sequence=[COR])
+mx = max(mun25.docentes_sociologia.max(), mun25.docentes_filosofia.max())
+fig.add_shape(type="line", x0=0, y0=0, x1=mx, y1=mx, line=dict(dash="dot", color="grey"))
+fig.update_layout(height=420, margin=dict(l=0, r=0, t=10, b=0))
+fig
+```

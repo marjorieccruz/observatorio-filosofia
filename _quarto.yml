@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+  execute-dir: project
+
+lang: pt-BR
+
+website:
+  title: "Observatório do Ensino de Filosofia"
+  site-url: ""
+  navbar:
+    left:
+      - href: index.qmd
+        text: Panorama 2025
+      - href: serie.qmd
+        text: Série histórica
+      - href: escolas.qmd
+        text: Escolas
+      - href: metodologia.qmd
+        text: Fontes e limites
+  page-footer:
+    center: "Dados: INEP (Censo Escolar, Indicador de Adequação da Formação Docente) e IBGE (Malha Municipal 2025). Protótipo em construção."
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-summary: "Ver código"
+    echo: false
+    warning: false
+
+execute:
+  freeze: auto

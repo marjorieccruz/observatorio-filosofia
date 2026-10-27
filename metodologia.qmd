@@ -1,0 +1,26 @@
+---
+title: "Fontes e limites"
+---
+
+## Fontes
+
+- **Censo Escolar da Educação Básica (INEP)**, microdados de 2015 a 2025.
+- **Indicador de Adequação da Formação Docente (AFD, INEP)**, 2017 a 2025, por município e por escola.
+- **Malha Municipal Digital 2025 (IBGE)**, Espírito Santo.
+
+## O que cada indicador mede
+
+- **Docentes de filosofia**: soma, por escola, dos docentes que declaram lecionar filosofia (`QT_DOC_BAS_DISC_FILOSOFIA`). Quem atua em mais de uma escola é contado em cada uma.
+- **Turmas com filosofia**: turmas em que a disciplina é oferecida (`QT_TUR_BAS_DISC_FILOSOFIA`).
+- **AFD, Grupo 1**: percentual de docentes do Ensino Médio com formação adequada à disciplina que lecionam, considerando **todas** as disciplinas.
+
+## Limites conhecidos
+
+1. **Filosofia só aparece em 2025.** Os microdados públicos de 2015 a 2024 foram republicados pelo INEP em versão reduzida e não trazem dados por disciplina.
+2. **O AFD não é separado por disciplina** nos arquivos públicos (nem por escola, nem por município, nem por UF). Ele não informa se o professor de filosofia é formado em filosofia.
+3. **Vínculos e pessoas.** As contagens de docentes são de vínculos com escolas.
+4. Para superar 1 e 2 seria preciso acesso aos dados identificados (SEDAP/INEP) ou dados da Secretaria de Estado da Educação.
+
+## Reprodutibilidade
+
+Os scripts em `scripts/` leem os arquivos originais do INEP e geram as tabelas em `dados/`. O site é gerado com [Quarto](https://quarto.org).

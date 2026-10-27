@@ -1,0 +1,57 @@
+---
+title: "Série histórica: o contexto do Ensino Médio"
+subtitle: "Espírito Santo, 2015 a 2025"
+---
+
+::: {.callout-note}
+Os microdados públicos do Censo Escolar de 2015 a 2024 não trazem informação por disciplina. Por isso esta página mostra o **contexto** em que a filosofia é ensinada (escolas, turmas, matrículas e docentes do Ensino Médio) e a **adequação da formação docente** no Médio como um todo. A informação específica de filosofia existe, por enquanto, só para 2025. Ver [Fontes e limites](metodologia.qmd).
+:::
+
+```{python}
+exec(open("_comum.py").read())
+tot = serie.groupby("NU_ANO_CENSO")[["escolas_em", "turmas_em", "docentes_em", "matriculas_em"]].sum().reset_index()
+```
+
+## Ensino Médio no estado
+
+```{python}
+lab = {"escolas_em": "Escolas", "turmas_em": "Turmas", "docentes_em": "Vínculos docentes", "matriculas_em": "Matrículas"}
+t = tot.melt(id_vars="NU_ANO_CENSO", var_name="ind", value_name="v")
+t["ind"] = t.ind.map(lab)
+fig = px.line(t, x="NU_ANO_CENSO", y="v", facet_col="ind", facet_col_wrap=2, markers=True,
+              color_discrete_sequence=[COR], labels={"NU_ANO_CENSO": "Ano", "v": ""})
+fig.update_yaxes(matches=None, rangemode="tozero")
+fig.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
+fig.update_layout(height=520, margin=dict(l=0, r=0, t=30, b=0))
+fig
+```
+
+## Adequação da formação docente no Ensino Médio
+
+Percentual de docentes do Médio em cada grupo do indicador do INEP. O Grupo 1 reúne quem tem licenciatura (ou bacharelado com complementação pedagógica) na mesma área da disciplina que leciona.
+
+```{python}
+a = afd[(afd.NO_CATEGORIA == "Total") & (afd.NO_DEPENDENCIA == "Total")].copy()
+grupos = {"MED_CAT_1": "Grupo 1", "MED_CAT_2": "Grupo 2", "MED_CAT_3": "Grupo 3", "MED_CAT_4": "Grupo 4", "MED_CAT_5": "Grupo 5"}
+for c in grupos: a[c] = pd.to_numeric(a[c], errors="coerce")
+med = a.groupby("NU_ANO_CENSO")[list(grupos)].median().reset_index().melt(id_vars="NU_ANO_CENSO", var_name="g", value_name="p")
+med["g"] = med.g.map(grupos)
+fig = px.line(med, x="NU_ANO_CENSO", y="p", color="g", markers=True,
+              labels={"NU_ANO_CENSO": "Ano", "p": "% (mediana dos municípios)", "g": ""},
+              color_discrete_sequence=px.colors.sequential.Blues_r)
+fig.update_layout(height=420, margin=dict(l=0, r=0, t=10, b=0))
+fig
+```
+
+## Por município
+
+```{python}
+g1 = a[["NU_ANO_CENSO", "NO_MUNICIPIO", "MED_CAT_1"]].dropna()
+fig = px.line(g1, x="NU_ANO_CENSO", y="MED_CAT_1", line_group="NO_MUNICIPIO", hover_name="NO_MUNICIPIO",
+              labels={"NU_ANO_CENSO": "Ano", "MED_CAT_1": "% no Grupo 1"}, color_discrete_sequence=["#9db4d6"])
+fig.update_traces(opacity=0.5)
+fig.update_layout(height=460, margin=dict(l=0, r=0, t=10, b=0))
+fig
+```
+
+Os grupos 2 a 5 vão de formação próxima à disciplina (Grupo 2) até ausência de curso superior (Grupo 5). Definições completas na nota técnica do INEP.

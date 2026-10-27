@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "serie.html",
+    "href": "serie.html",
+    "title": "Série histórica: o contexto do Ensino Médio",
+    "section": "",
+    "text": "Nota\n\n\n\nOs microdados públicos do Censo Escolar de 2015 a 2024 não trazem informação por disciplina. Por isso esta página mostra o contexto em que a filosofia é ensinada (escolas, turmas, matrículas e docentes do Ensino Médio) e a adequação da formação docente no Médio como um todo. A informação específica de filosofia existe, por enquanto, só para 2025. Ver Fontes e limites."
+  },
+  {
+    "objectID": "serie.html#ensino-médio-no-estado",
+    "href": "serie.html#ensino-médio-no-estado",
+    "title": "Série histórica: o contexto do Ensino Médio",
+    "section": "Ensino Médio no estado",
+    "text": "Ensino Médio no estado"
+  },
+  {
+    "objectID": "serie.html#adequação-da-formação-docente-no-ensino-médio",
+    "href": "serie.html#adequação-da-formação-docente-no-ensino-médio",
+    "title": "Série histórica: o contexto do Ensino Médio",
+    "section": "Adequação da formação docente no Ensino Médio",
+    "text": "Adequação da formação docente no Ensino Médio\nPercentual de docentes do Médio em cada grupo do indicador do INEP. O Grupo 1 reúne quem tem licenciatura (ou bacharelado com complementação pedagógica) na mesma área da disciplina que leciona."
+  },
+  {
+    "objectID": "serie.html#por-município",
+    "href": "serie.html#por-município",
+    "title": "Série histórica: o contexto do Ensino Médio",
+    "section": "Por município",
+    "text": "Por município\n\n\n                            \n                                            \n\n\nOs grupos 2 a 5 vão de formação próxima à disciplina (Grupo 2) até ausência de curso superior (Grupo 5). Definições completas na nota técnica do INEP."
+  },
+  {
+    "objectID": "escolas.html",
+    "href": "escolas.html",
+    "title": "Escolas com Ensino Médio ou filosofia, 2025",
+    "section": "",
+    "text": "Loading ITables v2.9.1 from the internet...\n        (need help?)\n      \n    \n  \n\n    \n      🔒ⓘMunicípio\n      Escola\n      Código INEP\n      Rede\n      Turmas EM\n      Turmas c/ filosofia\n      Docentes filosofia\n      Docentes sociologia\n      AFD Médio G1 (%)\n    \nAfonso CláudioCEEFMTI AFONSO CLAUDIO32025920Estadual18111181.7\nAfonso CláudioEEEFM ELVIRA BARROS32027753Estadual321181.3\nAfonso CláudioEEEFM JOSE CUPERTINO32082037Estadual0111NaN\nAfonso CláudioEEEFM JOSE GIESTAS32027540Estadual4311100.0\nAfonso CláudioEEEFM JOSE ROBERTO CHRISTO32027206Estadual321184.4\nAfonso CláudioEEEFM MARIA DE ABREU ALVIM32027567Estadual541170.4\nAfonso CláudioEEEM MATA FRIA32080727Estadual312241.7\nAlegreCE ADELIA BARROZO BIFANO32064420Privada221166.7\nAlegreCEEFMTI ARISTEU AGUIAR32045379Estadual2221100.0\nAlegreEEEFM ANA MONTEIRO DE PAIVA32045719Estadual322270.3\nAlegreEEEFM JOSE CORRENTE32046022Estadual311174.1\nAlegreEEEFM OSCAR DE ALMEIDA GAMA32045867Estadual321159.4\nAlegreEEEFM PROFESSOR PEDRO SIMAO32045360Estadual1161275.0\nAlegreEEEFM PROFª CELIA TEIXEIRA DO CARMO32046197Estadual431173.5\nAlegreEEEFM SIRENA REZENDE FONSECA32046103Estadual641190.9\nAlegreIFES - CAMPUS DE ALEGRE32046219Federal18182282.1\nAlfredo ChavesEEEFM CAMILA MOTTA32041756Estadual10611100.0\nAlfredo ChavesESCOLA FAMILIA AGRICOLA DE ALFREDO CHAVES - MEPES32041772Privada321177.4\nAlto Rio NovoEEEFM PASTOR ANTONIO NUNES DE CARVALHO32009038Estadual861146.1\nAnchietaCEEMTI PAULO FREIRE32082231Estadual2492352.7\nAnchietaEEEFM CORONEL GOMES DE OLIVEIRA32042647Estadual14112281.3\nAnchietaESCOLA FAMILIA AGRICOLA DE OLIVANIA - MEPES32043171Privada431153.8\nApiacáEEEFM CANDIDA POVOA32050984Estadual652277.4\nAracruzCE DE ARACRUZ32019696Privada731192.3\nAracruzCEEMTI MONSENHOR GUILHERME SCHMITZ32019807Estadual24172565.2\n(483 more rows not shown)\n\n\n\n\nEscolas sem turma regular de Ensino Médio aparecem quando têm filosofia em outra etapa ou modalidade (provavelmente EJA)."
+  },
+  {
+    "objectID": "metodologia.html",
+    "href": "metodologia.html",
+    "title": "Fontes e limites",
+    "section": "",
+    "text": "Censo Escolar da Educação Básica (INEP), microdados de 2015 a 2025.\nIndicador de Adequação da Formação Docente (AFD, INEP), 2017 a 2025, por município e por escola.\nMalha Municipal Digital 2025 (IBGE), Espírito Santo."
+  },
+  {
+    "objectID": "metodologia.html#fontes",
+    "href": "metodologia.html#fontes",
+    "title": "Fontes e limites",
+    "section": "",
+    "text": "Censo Escolar da Educação Básica (INEP), microdados de 2015 a 2025.\nIndicador de Adequação da Formação Docente (AFD, INEP), 2017 a 2025, por município e por escola.\nMalha Municipal Digital 2025 (IBGE), Espírito Santo."
+  },
+  {
+    "objectID": "metodologia.html#o-que-cada-indicador-mede",
+    "href": "metodologia.html#o-que-cada-indicador-mede",
+    "title": "Fontes e limites",
+    "section": "O que cada indicador mede",
+    "text": "O que cada indicador mede\n\nDocentes de filosofia: soma, por escola, dos docentes que declaram lecionar filosofia (QT_DOC_BAS_DISC_FILOSOFIA). Quem atua em mais de uma escola é contado em cada uma.\nTurmas com filosofia: turmas em que a disciplina é oferecida (QT_TUR_BAS_DISC_FILOSOFIA).\nAFD, Grupo 1: percentual de docentes do Ensino Médio com formação adequada à disciplina que lecionam, considerando todas as disciplinas."
+  },
+  {
+    "objectID": "metodologia.html#limites-conhecidos",
+    "href": "metodologia.html#limites-conhecidos",
+    "title": "Fontes e limites",
+    "section": "Limites conhecidos",
+    "text": "Limites conhecidos\n\nFilosofia só aparece em 2025. Os microdados públicos de 2015 a 2024 foram republicados pelo INEP em versão reduzida e não trazem dados por disciplina.\nO AFD não é separado por disciplina nos arquivos públicos (nem por escola, nem por município, nem por UF). Ele não informa se o professor de filosofia é formado em filosofia.\nVínculos e pessoas. As contagens de docentes são de vínculos com escolas.\nPara superar 1 e 2 seria preciso acesso aos dados identificados (SEDAP/INEP) ou dados da Secretaria de Estado da Educação."
+  },
+  {
+    "objectID": "metodologia.html#reprodutibilidade",
+    "href": "metodologia.html#reprodutibilidade",
+    "title": "Fontes e limites",
+    "section": "Reprodutibilidade",
+    "text": "Reprodutibilidade\nOs scripts em scripts/ leem os arquivos originais do INEP e geram as tabelas em dados/. O site é gerado com Quarto."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Panorama 2025: filosofia no Espírito Santo",
+    "section": "",
+    "text": "431escolas com Ensino Médio\n\n\n421dessas oferecem filosofia\n\n\n968vínculos docentes em filosofia¹\n\n\n3.593turmas com filosofia\n¹ Um mesmo professor que leciona em duas escolas é contado nas duas. O número indica vínculos, não pessoas."
+  },
+  {
+    "objectID": "index.html#mapa",
+    "href": "index.html#mapa",
+    "title": "Panorama 2025: filosofia no Espírito Santo",
+    "section": "Mapa",
+    "text": "Mapa"
+  },
+  {
+    "objectID": "index.html#por-dependência-administrativa",
+    "href": "index.html#por-dependência-administrativa",
+    "title": "Panorama 2025: filosofia no Espírito Santo",
+    "section": "Por dependência administrativa",
+    "text": "Por dependência administrativa"
+  },
+  {
+    "objectID": "index.html#filosofia-e-sociologia",
+    "href": "index.html#filosofia-e-sociologia",
+    "title": "Panorama 2025: filosofia no Espírito Santo",
+    "section": "Filosofia e sociologia",
+    "text": "Filosofia e sociologia\nAs duas disciplinas voltaram juntas ao currículo obrigatório do Ensino Médio em 2008 e costumam ser comparadas."
+  }
+]

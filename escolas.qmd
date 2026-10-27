@@ -1,0 +1,16 @@
+---
+title: "Escolas com Ensino Médio ou filosofia, 2025"
+---
+
+```{python}
+exec(open("_comum.py").read())
+from itables import show
+t = esc25[["NO_MUNICIPIO", "NO_ENTIDADE", "CO_ENTIDADE", "DEPENDENCIA", "QT_TUR_MED",
+           "QT_TUR_BAS_DISC_FILOSOFIA", "QT_DOC_BAS_DISC_FILOSOFIA", "QT_DOC_BAS_DISC_SOCIOLOGIA", "MED_CAT_1"]].copy()
+t.columns = ["Município", "Escola", "Código INEP", "Rede", "Turmas EM", "Turmas c/ filosofia",
+             "Docentes filosofia", "Docentes sociologia", "AFD Médio G1 (%)"]
+t = t.sort_values(["Município", "Escola"])
+show(t, lengthMenu=[25, 50, 100], classes="display compact", maxBytes=0)
+```
+
+Escolas sem turma regular de Ensino Médio aparecem quando têm filosofia em outra etapa ou modalidade (provavelmente EJA).

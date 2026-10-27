@@ -1,0 +1,4 @@
+.quarto/
+__pycache__/
+*.zip
+_trabalho/
