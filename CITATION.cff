@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Se usar este material, cite-o como abaixo."
+title: "Observatório do Ensino de Filosofia: protótipo (Espírito Santo)"
+authors:
+  - family-names: "Da Cruz"
+    given-names: "Marjorie"
+version: v0.1.0
+doi: 10.5281/zenodo.23695823
+date-released: 2026-10-27
+license: MIT
+repository-code: "https://github.com/marjorieccruz/observatorio-filosofia"

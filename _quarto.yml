@@ -19,7 +19,7 @@ website:
       - href: metodologia.qmd
         text: Fontes e limites
   page-footer:
-    center: "Dados: INEP (Censo Escolar, Indicador de Adequação da Formação Docente) e IBGE (Malha Municipal 2025). Protótipo em construção."
+    center: "Dados: INEP (Censo Escolar, Indicador de Adequação da Formação Docente) e IBGE (Malha Municipal 2025). Protótipo em construção. Como citar: [doi:10.5281/zenodo.23695823](https://doi.org/10.5281/zenodo.23695823)"
 
 format:
   html:
