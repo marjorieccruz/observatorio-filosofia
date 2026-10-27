@@ -1,0 +1,9 @@
+{
+  "title": "Observatório do Ensino de Filosofia: protótipo (Espírito Santo)",
+  "description": "Painel de dados abertos sobre o ensino de filosofia na educação básica, construído com Quarto e Python a partir dos microdados do Censo Escolar (INEP), do Indicador de Adequação da Formação Docente (INEP) e da Malha Municipal (IBGE). Versão inicial com recorte no Espírito Santo.",
+  "upload_type": "software",
+  "creators": [{"name": "Da Cruz, Marjorie"}],
+  "keywords": ["ensino de filosofia", "educação básica", "Censo Escolar", "INEP", "Espírito Santo", "dados abertos", "observatório"],
+  "language": "por",
+  "version": "v0.1.0"
+}
