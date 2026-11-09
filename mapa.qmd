@@ -1,0 +1,67 @@
+---
+title: "Mapa da filosofia no Espírito Santo, 2015 a 2024"
+subtitle: "Escolha o ano, a rede e o indicador"
+format:
+  html:
+    toc: false
+---
+
+```{python}
+exec(open("_comum.py").read())
+br = pd.read_csv("dados/inep_filosofia_brasil_2015_2024.csv.gz")
+es = br[br.SG_UF == "ES"].copy()
+es["REDE"] = es.DS_DEPENDENCIA.map({"ESTADUAL": "Pública", "FEDERAL": "Pública", "MUNICIPAL": "Pública", "PRIVADA": "Privada"})
+ETAPA = {"ENSINO MEDIO": "Ensino Médio", "EJA MEDIO": "EJA Médio", "EF ANOS FINAIS": "Fundamental, anos finais"}
+es["ETAPA"] = es.ETAPA.map(ETAPA)
+t = es.groupby(["ANO", "CO_MUNICIPIO", "NO_MUNICIPIO", "REDE", "ETAPA"])[["QT_DOCENTES_DISTINTOS", "QT_TURMAS", "QT_ESCOLAS"]].sum().reset_index()
+import geopandas as gpd
+from shapely.geometry import box
+g = gpd.GeoDataFrame.from_features(geo["features"]).clip(box(-42, -21.5, -39.5, -17.8))  # remove a ilha da Trindade
+geo_es = json.loads(g.to_json())
+for f in geo_es["features"]: f["id"] = int(f["properties"]["CD_MUN"])
+ojs_define(dados=t.to_dict(orient="records"), geo=geo_es)
+```
+
+```{ojs}
+//| echo: false
+viewof ano = Inputs.range([2015, 2024], {step: 1, value: 2024, label: "Ano"})
+viewof rede = Inputs.radio(["Todas", "Pública", "Privada"], {value: "Todas", label: "Rede"})
+viewof etapa = Inputs.checkbox(["Ensino Médio", "EJA Médio", "Fundamental, anos finais"], {value: ["Ensino Médio", "EJA Médio", "Fundamental, anos finais"], label: "Etapa"})
+viewof indicador = Inputs.select(new Map([["Docentes", "QT_DOCENTES_DISTINTOS"], ["Turmas", "QT_TURMAS"], ["Escolas", "QT_ESCOLAS"]]), {label: "Indicador"})
+```
+
+```{ojs}
+//| echo: false
+linhas = dados
+filtra = (a) => linhas.filter(d => d.ANO === a && (rede === "Todas" || d.REDE === rede) && etapa.includes(d.ETAPA))
+soma = (rows) => d3.rollup(rows, v => d3.sum(v, d => d[indicador]), d => d.CO_MUNICIPIO)
+valores = soma(filtra(ano))
+maximo = d3.max(d3.range(2015, 2025), a => d3.max(soma(filtra(a)).values())) || 1
+nome = new Map(geo.features.map(f => [f.id, f.properties.NM_MUN]))
+Plot.plot({
+  width: 760, height: 640,
+  projection: {type: "mercator", domain: geo},
+  color: {type: "sqrt", scheme: "blues", domain: [0, maximo], legend: true,
+          label: (indicador === "QT_TURMAS" ? "Turmas" : indicador === "QT_ESCOLAS" ? "Escolas" : "Docentes") + " com filosofia"},
+  marks: [
+    Plot.geo(geo, {fill: d => valores.get(d.id) ?? 0, stroke: "white", strokeWidth: 0.6,
+      title: d => `${nome.get(d.id)}\n${valores.get(d.id) ?? 0}`, tip: true})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+md`**Total no estado em ${ano}:** ${d3.sum(valores.values()).toLocaleString("pt-BR")}. A escala de cores é fixa entre os anos, para que as mudanças sejam comparáveis.`
+```
+
+```{ojs}
+//| echo: false
+serie = d3.range(2015, 2025).map(a => ({ano: a, total: d3.sum(soma(filtra(a)).values())}))
+Plot.plot({
+  height: 220, width: 760, marginLeft: 50, y: {grid: true, label: "Total no estado", zero: true}, x: {label: "Ano", tickFormat: d => String(d)},
+  marks: [Plot.lineY(serie, {x: "ano", y: "total", stroke: "#3b5b92"}), Plot.dot(serie, {x: "ano", y: "total", fill: d => d.ano === ano ? "#e07b39" : "#3b5b92", r: d => d.ano === ano ? 6 : 3})]
+})
+```
+
+Fonte: tabulação especial do INEP (Demanda 2026-95). Docentes são pessoas distintas em cada combinação de município, rede e etapa, então somar etapas ou redes pode contar a mesma pessoa mais de uma vez.

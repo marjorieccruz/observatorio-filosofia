@@ -12,6 +12,8 @@ website:
     left:
       - href: index.qmd
         text: Panorama 2025
+      - href: mapa.qmd
+        text: Mapa
       - href: filosofia.qmd
         text: Filosofia 2015-2024
       - href: serie.qmd
