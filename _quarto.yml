@@ -12,8 +12,10 @@ website:
     left:
       - href: index.qmd
         text: Panorama 2025
+      - href: filosofia.qmd
+        text: Filosofia 2015-2024
       - href: serie.qmd
-        text: Série histórica
+        text: Contexto do Ensino Médio
       - href: escolas.qmd
         text: Escolas
       - href: metodologia.qmd

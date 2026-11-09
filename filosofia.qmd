@@ -1,0 +1,65 @@
+---
+title: "Filosofia de 2015 a 2024"
+subtitle: "Docentes, turmas e escolas com filosofia no Espírito Santo"
+---
+
+::: {.callout-note}
+Dados obtidos por pedido de acesso à informação ao INEP (Demanda 2026-95), com base no Censo Escolar. Os microdados públicos desses anos não trazem informação por disciplina. Os números de 2025, na página [Panorama 2025](index.qmd), vêm dos microdados públicos e foram calculados de outro modo, por isso não aparecem nesta série.
+:::
+
+```{python}
+exec(open("_comum.py").read())
+br = pd.read_csv("dados/inep_filosofia_brasil_2015_2024.csv.gz")
+es = br[br.SG_UF == "ES"].copy()
+ETAPA = {"ENSINO MEDIO": "Ensino Médio", "EJA MEDIO": "EJA Médio", "EF ANOS FINAIS": "Fundamental, anos finais"}
+REDE = {"ESTADUAL": "Estadual", "FEDERAL": "Federal", "MUNICIPAL": "Municipal", "PRIVADA": "Privada"}
+es["Etapa"] = es.ETAPA.map(ETAPA); es["Rede"] = es.DS_DEPENDENCIA.map(REDE)
+```
+
+## Docentes e vínculos
+
+```{python}
+t = es.groupby("ANO")[["QT_DOCENTES_DISTINTOS", "QT_VINCULOS_DOC_ESCOLA"]].sum().reset_index()
+t = t.melt(id_vars="ANO", var_name="m", value_name="v")
+t["m"] = t.m.map({"QT_DOCENTES_DISTINTOS": "Docentes distintos¹", "QT_VINCULOS_DOC_ESCOLA": "Vínculos docente-escola"})
+fig = px.line(t, x="ANO", y="v", color="m", markers=True,
+              labels={"ANO": "Ano", "v": "", "m": ""}, color_discrete_sequence=[COR, "#9db4d6"])
+fig.update_yaxes(rangemode="tozero")
+fig.update_layout(height=400, margin=dict(l=0, r=0, t=10, b=0), legend=dict(orientation="h", y=-0.2))
+fig
+```
+
+¹ Soma dos agrupamentos por município, rede e etapa. Quem leciona filosofia em mais de uma etapa, rede ou município é contado mais de uma vez, então o número de pessoas no estado é um pouco menor.
+
+## Turmas por etapa
+
+```{python}
+t = es.groupby(["ANO", "Etapa"]).QT_TURMAS.sum().reset_index()
+fig = px.bar(t, x="ANO", y="QT_TURMAS", color="Etapa", labels={"ANO": "Ano", "QT_TURMAS": "Turmas com filosofia"},
+             color_discrete_sequence=[COR, "#6f8fc0", "#c3d2ea"])
+fig.update_layout(height=420, margin=dict(l=0, r=0, t=10, b=0), legend=dict(orientation="h", y=-0.2, title=None))
+fig
+```
+
+## Por rede
+
+```{python}
+t = es.groupby(["ANO", "Rede"]).QT_VINCULOS_DOC_ESCOLA.sum().reset_index()
+fig = px.line(t, x="ANO", y="QT_VINCULOS_DOC_ESCOLA", color="Rede", markers=True,
+              labels={"ANO": "Ano", "QT_VINCULOS_DOC_ESCOLA": "Vínculos docentes"},
+              color_discrete_sequence=[COR, "#e07b39", "#7aa95c", "#9a7bb5"])
+fig.update_layout(height=400, margin=dict(l=0, r=0, t=10, b=0))
+fig
+```
+
+## Por município
+
+```{python}
+from itables import show
+m = es.groupby(["NO_MUNICIPIO", "ANO"]).QT_DOCENTES_DISTINTOS.sum().unstack("ANO").fillna(0).astype(int)
+m.index.name = "Município"; m.columns = [str(c) for c in m.columns]
+m["Variação 2015-2024"] = m["2024"] - m["2015"]
+show(m.reset_index().sort_values("Município"), lengthMenu=[25, 50, 100], classes="display compact", maxBytes=0)
+```
+
+O arquivo completo do INEP, com todos os municípios do Brasil, está em `dados/inep_filosofia_brasil_2015_2024.csv.gz` no [repositório](https://github.com/marjorieccruz/observatorio-filosofia).

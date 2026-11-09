@@ -2,51 +2,79 @@
   {
     "objectID": "serie.html",
     "href": "serie.html",
-    "title": "Série histórica: o contexto do Ensino Médio",
+    "title": "Contexto do Ensino Médio",
     "section": "",
-    "text": "Nota\n\n\n\nOs microdados públicos do Censo Escolar de 2015 a 2024 não trazem informação por disciplina. Por isso esta página mostra o contexto em que a filosofia é ensinada (escolas, turmas, matrículas e docentes do Ensino Médio) e a adequação da formação docente no Médio como um todo. A informação específica de filosofia existe, por enquanto, só para 2025. Ver Fontes e limites."
+    "text": "Nota\n\n\n\nOs microdados públicos do Censo Escolar de 2015 a 2024 não trazem informação por disciplina. Por isso esta página mostra o contexto em que a filosofia é ensinada (escolas, turmas, matrículas e docentes do Ensino Médio) e a adequação da formação docente no Médio como um todo. A série específica de filosofia, obtida junto ao INEP, está na página Filosofia 2015-2024. Ver Fontes e limites."
   },
   {
     "objectID": "serie.html#ensino-médio-no-estado",
     "href": "serie.html#ensino-médio-no-estado",
-    "title": "Série histórica: o contexto do Ensino Médio",
+    "title": "Contexto do Ensino Médio",
     "section": "Ensino Médio no estado",
     "text": "Ensino Médio no estado"
   },
   {
     "objectID": "serie.html#adequação-da-formação-docente-no-ensino-médio",
     "href": "serie.html#adequação-da-formação-docente-no-ensino-médio",
-    "title": "Série histórica: o contexto do Ensino Médio",
+    "title": "Contexto do Ensino Médio",
     "section": "Adequação da formação docente no Ensino Médio",
     "text": "Adequação da formação docente no Ensino Médio\nPercentual de docentes do Médio em cada grupo do indicador do INEP. O Grupo 1 reúne quem tem licenciatura (ou bacharelado com complementação pedagógica) na mesma área da disciplina que leciona."
   },
   {
     "objectID": "serie.html#por-município",
     "href": "serie.html#por-município",
-    "title": "Série histórica: o contexto do Ensino Médio",
+    "title": "Contexto do Ensino Médio",
     "section": "Por município",
     "text": "Por município\n\n\n                            \n                                            \n\n\nOs grupos 2 a 5 vão de formação próxima à disciplina (Grupo 2) até ausência de curso superior (Grupo 5). Definições completas na nota técnica do INEP."
   },
   {
-    "objectID": "escolas.html",
-    "href": "escolas.html",
-    "title": "Escolas com Ensino Médio ou filosofia, 2025",
+    "objectID": "filosofia.html",
+    "href": "filosofia.html",
+    "title": "Filosofia de 2015 a 2024",
     "section": "",
-    "text": "Loading ITables v2.9.1 from the internet...\n        (need help?)\n      \n    \n  \n\n    \n      🔒ⓘMunicípio\n      Escola\n      Código INEP\n      Rede\n      Turmas EM\n      Turmas c/ filosofia\n      Docentes filosofia\n      Docentes sociologia\n      AFD Médio G1 (%)\n    \nAfonso CláudioCEEFMTI AFONSO CLAUDIO32025920Estadual18111181.7\nAfonso CláudioEEEFM ELVIRA BARROS32027753Estadual321181.3\nAfonso CláudioEEEFM JOSE CUPERTINO32082037Estadual0111NaN\nAfonso CláudioEEEFM JOSE GIESTAS32027540Estadual4311100.0\nAfonso CláudioEEEFM JOSE ROBERTO CHRISTO32027206Estadual321184.4\nAfonso CláudioEEEFM MARIA DE ABREU ALVIM32027567Estadual541170.4\nAfonso CláudioEEEM MATA FRIA32080727Estadual312241.7\nAlegreCE ADELIA BARROZO BIFANO32064420Privada221166.7\nAlegreCEEFMTI ARISTEU AGUIAR32045379Estadual2221100.0\nAlegreEEEFM ANA MONTEIRO DE PAIVA32045719Estadual322270.3\nAlegreEEEFM JOSE CORRENTE32046022Estadual311174.1\nAlegreEEEFM OSCAR DE ALMEIDA GAMA32045867Estadual321159.4\nAlegreEEEFM PROFESSOR PEDRO SIMAO32045360Estadual1161275.0\nAlegreEEEFM PROFª CELIA TEIXEIRA DO CARMO32046197Estadual431173.5\nAlegreEEEFM SIRENA REZENDE FONSECA32046103Estadual641190.9\nAlegreIFES - CAMPUS DE ALEGRE32046219Federal18182282.1\nAlfredo ChavesEEEFM CAMILA MOTTA32041756Estadual10611100.0\nAlfredo ChavesESCOLA FAMILIA AGRICOLA DE ALFREDO CHAVES - MEPES32041772Privada321177.4\nAlto Rio NovoEEEFM PASTOR ANTONIO NUNES DE CARVALHO32009038Estadual861146.1\nAnchietaCEEMTI PAULO FREIRE32082231Estadual2492352.7\nAnchietaEEEFM CORONEL GOMES DE OLIVEIRA32042647Estadual14112281.3\nAnchietaESCOLA FAMILIA AGRICOLA DE OLIVANIA - MEPES32043171Privada431153.8\nApiacáEEEFM CANDIDA POVOA32050984Estadual652277.4\nAracruzCE DE ARACRUZ32019696Privada731192.3\nAracruzCEEMTI MONSENHOR GUILHERME SCHMITZ32019807Estadual24172565.2\n(483 more rows not shown)\n\n\n\n\nEscolas sem turma regular de Ensino Médio aparecem quando têm filosofia em outra etapa ou modalidade (provavelmente EJA)."
+    "text": "Nota\n\n\n\nDados obtidos por pedido de acesso à informação ao INEP (Demanda 2026-95), com base no Censo Escolar. Os microdados públicos desses anos não trazem informação por disciplina. Os números de 2025, na página Panorama 2025, vêm dos microdados públicos e foram calculados de outro modo, por isso não aparecem nesta série."
+  },
+  {
+    "objectID": "filosofia.html#docentes-e-vínculos",
+    "href": "filosofia.html#docentes-e-vínculos",
+    "title": "Filosofia de 2015 a 2024",
+    "section": "Docentes e vínculos",
+    "text": "Docentes e vínculos\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n¹ Soma dos agrupamentos por município, rede e etapa. Quem leciona filosofia em mais de uma etapa, rede ou município é contado mais de uma vez, então o número de pessoas no estado é um pouco menor."
+  },
+  {
+    "objectID": "filosofia.html#turmas-por-etapa",
+    "href": "filosofia.html#turmas-por-etapa",
+    "title": "Filosofia de 2015 a 2024",
+    "section": "Turmas por etapa",
+    "text": "Turmas por etapa"
+  },
+  {
+    "objectID": "filosofia.html#por-rede",
+    "href": "filosofia.html#por-rede",
+    "title": "Filosofia de 2015 a 2024",
+    "section": "Por rede",
+    "text": "Por rede"
+  },
+  {
+    "objectID": "filosofia.html#por-município",
+    "href": "filosofia.html#por-município",
+    "title": "Filosofia de 2015 a 2024",
+    "section": "Por município",
+    "text": "Por município\n\n\n\n\n  \n    \n      \n    \n        \n        \n        \n        \n        \n        \n        \n        \n    \n    \n   \n    \n      \n  \n        \n    \n    \n  \n        \n    \n    \n  \n        \n    \n      \n  \n        \n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n        \n    \n\n\n        Loading ITables v2.9.1 from the internet...\n        (need help?)\n      \n    \n  \n\n    \n      🔒ⓘMunicípio\n      2015\n      2016\n      2017\n      2018\n      2019\n      2020\n      2021\n      2022\n      2023\n      2024\n      Variação 2015-2024\n    \nAfonso Cláudio8673447686-2\nAlegre11987971089154\nAlfredo Chaves6575332433-3\nAlto Rio Novo2221121111-1\nAnchieta55455556561\nApiacá3222323212-1\nAracruz23232424241515202320-3\nAtílio Vivácqua4453222222-2\nBaixo Guandu6654552444-2\nBarra de São Francisco87877810910113\nBoa Esperança56565544561\nBom Jesus do Norte3223252311-2\nBrejetuba7744244685-2\nCachoeiro de Itapemirim51484136333629433938-13\nCariacica68615548484648475356-12\nCastelo77765556770\nColatina30252222202019272224-6\nConceição da Barra1615141411566710-6\nConceição do Castelo5222333333-2\nDivino de São Lourenço11222112221\nDomingos Martins10896543554-6\nDores do Rio Preto32211234341\nEcoporanga5444544444-1\nFundão22323334431\nGovernador Lindenberg21111112220\n(53 more rows not shown)\n\n\n\n\nO arquivo completo do INEP, com todos os municípios do Brasil, está em dados/inep_filosofia_brasil_2015_2024.csv.gz no repositório."
   },
   {
     "objectID": "metodologia.html",
     "href": "metodologia.html",
     "title": "Fontes e limites",
     "section": "",
-    "text": "Censo Escolar da Educação Básica (INEP), microdados de 2015 a 2025.\nIndicador de Adequação da Formação Docente (AFD, INEP), 2017 a 2025, por município e por escola.\nMalha Municipal Digital 2025 (IBGE), Espírito Santo."
+    "text": "Censo Escolar da Educação Básica (INEP), microdados de 2015 a 2025.\nIndicador de Adequação da Formação Docente (AFD, INEP), 2017 a 2025, por município e por escola.\nTabulação especial do INEP sobre docentes, turmas e escolas com Filosofia por município, rede e etapa, 2015 a 2024, obtida por pedido de acesso à informação (Demanda 2026-95).\nMalha Municipal Digital 2025 (IBGE), Espírito Santo."
   },
   {
     "objectID": "metodologia.html#fontes",
     "href": "metodologia.html#fontes",
     "title": "Fontes e limites",
     "section": "",
-    "text": "Censo Escolar da Educação Básica (INEP), microdados de 2015 a 2025.\nIndicador de Adequação da Formação Docente (AFD, INEP), 2017 a 2025, por município e por escola.\nMalha Municipal Digital 2025 (IBGE), Espírito Santo."
+    "text": "Censo Escolar da Educação Básica (INEP), microdados de 2015 a 2025.\nIndicador de Adequação da Formação Docente (AFD, INEP), 2017 a 2025, por município e por escola.\nTabulação especial do INEP sobre docentes, turmas e escolas com Filosofia por município, rede e etapa, 2015 a 2024, obtida por pedido de acesso à informação (Demanda 2026-95).\nMalha Municipal Digital 2025 (IBGE), Espírito Santo."
   },
   {
     "objectID": "metodologia.html#o-que-cada-indicador-mede",
@@ -60,7 +88,7 @@
     "href": "metodologia.html#limites-conhecidos",
     "title": "Fontes e limites",
     "section": "Limites conhecidos",
-    "text": "Limites conhecidos\n\nFilosofia só aparece em 2025. Os microdados públicos de 2015 a 2024 foram republicados pelo INEP em versão reduzida e não trazem dados por disciplina.\nO AFD não é separado por disciplina nos arquivos públicos (nem por escola, nem por município, nem por UF). Ele não informa se o professor de filosofia é formado em filosofia.\nVínculos e pessoas. As contagens de docentes são de vínculos com escolas.\nPara superar 1 e 2 seria preciso acesso aos dados identificados (SEDAP/INEP) ou dados da Secretaria de Estado da Educação."
+    "text": "Limites conhecidos\n\nDuas fontes para a filosofia. De 2015 a 2024 os dados vêm da tabulação especial do INEP; em 2025, dos microdados públicos. Os métodos de contagem diferem, e por isso as duas não são emendadas numa mesma série.\nO AFD não é separado por disciplina nos arquivos públicos (nem por escola, nem por município, nem por UF). Ele não informa se o professor de filosofia é formado em filosofia.\nVínculos e pessoas. As contagens de docentes são de vínculos com escolas.\nA formação dos docentes de filosofia (item 2) segue sem dados. Para obtê-la seria preciso acesso aos dados identificados (SEDAP/INEP) ou dados da Secretaria de Estado da Educação."
   },
   {
     "objectID": "metodologia.html#reprodutibilidade",
@@ -68,6 +96,13 @@
     "title": "Fontes e limites",
     "section": "Reprodutibilidade",
     "text": "Reprodutibilidade\nOs scripts em scripts/ leem os arquivos originais do INEP e geram as tabelas em dados/. O site é gerado com Quarto."
+  },
+  {
+    "objectID": "escolas.html",
+    "href": "escolas.html",
+    "title": "Escolas com Ensino Médio ou filosofia, 2025",
+    "section": "",
+    "text": "Loading ITables v2.9.1 from the internet...\n        (need help?)\n      \n    \n  \n\n    \n      🔒ⓘMunicípio\n      Escola\n      Código INEP\n      Rede\n      Turmas EM\n      Turmas c/ filosofia\n      Docentes filosofia\n      Docentes sociologia\n      AFD Médio G1 (%)\n    \nAfonso CláudioCEEFMTI AFONSO CLAUDIO32025920Estadual18111181.7\nAfonso CláudioEEEFM ELVIRA BARROS32027753Estadual321181.3\nAfonso CláudioEEEFM JOSE CUPERTINO32082037Estadual0111NaN\nAfonso CláudioEEEFM JOSE GIESTAS32027540Estadual4311100.0\nAfonso CláudioEEEFM JOSE ROBERTO CHRISTO32027206Estadual321184.4\nAfonso CláudioEEEFM MARIA DE ABREU ALVIM32027567Estadual541170.4\nAfonso CláudioEEEM MATA FRIA32080727Estadual312241.7\nAlegreCE ADELIA BARROZO BIFANO32064420Privada221166.7\nAlegreCEEFMTI ARISTEU AGUIAR32045379Estadual2221100.0\nAlegreEEEFM ANA MONTEIRO DE PAIVA32045719Estadual322270.3\nAlegreEEEFM JOSE CORRENTE32046022Estadual311174.1\nAlegreEEEFM OSCAR DE ALMEIDA GAMA32045867Estadual321159.4\nAlegreEEEFM PROFESSOR PEDRO SIMAO32045360Estadual1161275.0\nAlegreEEEFM PROFª CELIA TEIXEIRA DO CARMO32046197Estadual431173.5\nAlegreEEEFM SIRENA REZENDE FONSECA32046103Estadual641190.9\nAlegreIFES - CAMPUS DE ALEGRE32046219Federal18182282.1\nAlfredo ChavesEEEFM CAMILA MOTTA32041756Estadual10611100.0\nAlfredo ChavesESCOLA FAMILIA AGRICOLA DE ALFREDO CHAVES - MEPES32041772Privada321177.4\nAlto Rio NovoEEEFM PASTOR ANTONIO NUNES DE CARVALHO32009038Estadual861146.1\nAnchietaCEEMTI PAULO FREIRE32082231Estadual2492352.7\nAnchietaEEEFM CORONEL GOMES DE OLIVEIRA32042647Estadual14112281.3\nAnchietaESCOLA FAMILIA AGRICOLA DE OLIVANIA - MEPES32043171Privada431153.8\nApiacáEEEFM CANDIDA POVOA32050984Estadual652277.4\nAracruzCE DE ARACRUZ32019696Privada731192.3\nAracruzCEEMTI MONSENHOR GUILHERME SCHMITZ32019807Estadual24172565.2\n(483 more rows not shown)\n\n\n\n\nEscolas sem turma regular de Ensino Médio aparecem quando têm filosofia em outra etapa ou modalidade (provavelmente EJA)."
   },
   {
     "objectID": "index.html",

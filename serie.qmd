@@ -1,10 +1,10 @@
 ---
-title: "Série histórica: o contexto do Ensino Médio"
+title: "Contexto do Ensino Médio"
 subtitle: "Espírito Santo, 2015 a 2025"
 ---
 
 ::: {.callout-note}
-Os microdados públicos do Censo Escolar de 2015 a 2024 não trazem informação por disciplina. Por isso esta página mostra o **contexto** em que a filosofia é ensinada (escolas, turmas, matrículas e docentes do Ensino Médio) e a **adequação da formação docente** no Médio como um todo. A informação específica de filosofia existe, por enquanto, só para 2025. Ver [Fontes e limites](metodologia.qmd).
+Os microdados públicos do Censo Escolar de 2015 a 2024 não trazem informação por disciplina. Por isso esta página mostra o **contexto** em que a filosofia é ensinada (escolas, turmas, matrículas e docentes do Ensino Médio) e a **adequação da formação docente** no Médio como um todo. A série específica de filosofia, obtida junto ao INEP, está na página [Filosofia 2015-2024](filosofia.qmd). Ver [Fontes e limites](metodologia.qmd).
 :::
 
 ```{python}
